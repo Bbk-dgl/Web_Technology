@@ -1,0 +1,47 @@
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 25px;
+}
+/* Carousel Caption Styling */
+        .carousel-caption h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+        }
+        .carousel-caption p {
+            font-size: 1.2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+        }
+
+        /* Card hover effect */
+        .card:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .feature-img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: #28a745;
+            color: white;
+        }
+
+        .cta-section a {
+            color: #28a745;
+        }
+
+        #bookingForm button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}

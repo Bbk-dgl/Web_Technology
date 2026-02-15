@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking - Explore Dolakha</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <style>
+    /* Gradient background */
+    section.container {
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      padding: 50px 15px;
+      border-radius: 20px;
+    }
+
+    /* Input focus effect */
+    #bookingForm .form-control:focus,
+    #bookingForm .form-select:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+    }
+
+    /* Hover button */
+    #bookingForm button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .input-group-text i {
+      font-size: 1.2rem;
+      color: #28a745;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Explore Dolakha</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+  <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
+                <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
+                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- ================= END HEADER ================= -->
+
+
+<!-- ================= BOOKING SECTION ================= -->
+<section class="container my-5">
+  <h2 class="mb-4 text-center">Book Your Visit</h2>
+
+  <form id="bookingForm" class="mx-auto p-5 shadow-lg rounded-4 bg-white" style="max-width:600px; background: #ffffffcc;">
+    
+    <!-- Full Name -->
+    <div class="mb-3">
+      <label for="name" class="form-label fw-bold">Full Name</label>
+      <div class="input-group">
+        <span class="input-group-text bg-white"><i class="bi bi-person-fill"></i></span>
+        <input type="text" class="form-control form-control-lg rounded-pill" id="name" placeholder="Enter your full name" required>
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="mb-3">
+      <label for="email" class="form-label fw-bold">Email Address</label>
+      <div class="input-group">
+        <span class="input-group-text bg-white"><i class="bi bi-envelope-fill"></i></span>
+        <input type="email" class="form-control form-control-lg rounded-pill" id="email" placeholder="Enter your email" required>
+      </div>
+    </div>
+
+    <!-- Attraction -->
+    <div class="mb-3">
+      <label for="attraction" class="form-label fw-bold">Select Attraction</label>
+      <div class="input-group">
+        <span class="input-group-text bg-white"><i class="bi bi-geo-alt-fill"></i></span>
+        <select class="form-select form-select-lg rounded-pill" id="attraction" required>
+          <option value="">Choose...</option>
+          <option>Kalinchok</option>
+          <option>Sailung</option>
+          <option>Tsho Lake</option>
+          <option>Jiri</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Date -->
+    <div class="mb-4">
+      <label for="date" class="form-label fw-bold">Preferred Date</label>
+      <div class="input-group">
+        <span class="input-group-text bg-white"><i class="bi bi-calendar-event-fill"></i></span>
+        <input type="date" class="form-control form-control-lg rounded-pill" id="date" required>
+      </div>
+    </div>
+
+    <!-- Submit -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-success btn-lg px-5 shadow-sm">
+        Book Now
+      </button>
+    </div>
+
+  </form>
+</section>
+<!-- ================= END BOOKING ================= -->
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <div class="container">
+    <p class="mb-1">© 2026 Explore Dolakha. All Rights Reserved.</p>
+   
+  </div>
+</footer>
+<!-- ================= END FOOTER ================= -->
+
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("Your booking request has been submitted successfully!");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login - Explore Dolakha</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<style>
+  body {
+    background: linear-gradient(135deg, #0dcaf0, #198754);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeIn 1s ease-in;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .card {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .card-body {
+    padding: 2rem;
+  }
+
+  h3.card-title {
+    font-weight: 700;
+    color: #198754;
+  }
+
+  .form-control {
+    border-radius: 50px;
+    padding: 0.75rem 1rem;
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.3);
+    border-color: #198754;
+  }
+
+  .btn-primary {
+    border-radius: 50px;
+    background: #198754;
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background: #0dcaf0;
+  }
+
+  .input-group-text {
+    cursor: pointer;
+  }
+
+  .social-login {
+    margin-top: 15px;
+  }
+
+  .social-login button {
+    border-radius: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  p.text-center a {
+    color: #0dcaf0;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  p.text-center a:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h3 class="card-title text-center mb-4">Login</h3>
+          <form id="loginForm">
+            <div class="mb-3 position-relative">
+              <label for="email" class="form-label">Email address</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white"><i class="bi bi-envelope-fill text-success"></i></span>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+              </div>
+            </div>
+
+            <div class="mb-3 position-relative">
+              <label for="password" class="form-label">Password</label>
+              <div class="input-group">
+                <span class="input-group-text bg-white" id="togglePassword"><i class="bi bi-eye-fill text-success"></i></span>
+                <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+              </div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary btn-lg">Login</button>
+            </div>
+
+            <div class="social-login text-center mt-3">
+              <button type="button" class="btn btn-danger"><i class="bi bi-google"></i> Login with Google</button>
+              <button type="button" class="btn btn-primary"><i class="bi bi-facebook"></i> Login with Facebook</button>
+            </div>
+          </form>
+
+          <p class="text-center mt-3">Don't have an account? <a href="signup.html">Sign Up</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Toggle password visibility
+  const togglePassword = document.getElementById('togglePassword');
+  const password = document.getElementById('password');
+
+  togglePassword.addEventListener('click', () => {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    togglePassword.innerHTML = type === 'password' 
+        ? '<i class="bi bi-eye-fill text-success"></i>' 
+        : '<i class="bi bi-eye-slash-fill text-success"></i>';
+  });
+
+  // Login form logic
+  const loginForm = document.getElementById('loginForm');
+  loginForm.addEventListener('submit', function(e){
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const pwd = document.getElementById('password').value;
+
+    if(email && pwd){
+      // Set login status in localStorage
+      localStorage.setItem('isLoggedIn', 'true');
+      localStorage.setItem('userEmail', email);
+
+      alert("Login successful!");
+      // Redirect to Booking page after login
+      window.location.href = "booking.html";
+    } else {
+      alert("Please enter valid email and password.");
+    }
+  });
+</script>
+
+</body>
+</html>
