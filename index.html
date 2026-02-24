@@ -3,92 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Explore Dolakha - Home</title>
+<title> Dolakha</title>
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<style>
-    /* ================= Global Styles ================= */
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
 
-    a {
-        text-decoration: none;
-    }
-
-    /* ================= Navbar ================= */
-    .navbar-brand {
-        font-weight: 700;
-        font-size: 1.5rem;
-    }
-
-    /* ================= Hero Carousel ================= */
-    #heroCarousel .carousel-caption {
-        background: rgba(0,0,0,0.5);
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    #heroCarousel img {
-        max-height: 600px;
-        object-fit: cover;
-    }
-
-    /* ================= Features Section ================= */
-    .card {
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-    }
-
-    .card-title {
-        font-weight: 600;
-    }
-
-    /* ================= Call to Action ================= */
-    .cta-section {
-        background: linear-gradient(to right, #0dcaf0, #198754);
-        color: #fff;
-        border-radius: 15px;
-        margin: 50px 0;
-        padding: 60px 30px;
-    }
-
-    .cta-section h2 {
-        font-weight: 700;
-    }
-
-    .cta-section .btn-light {
-        font-weight: 600;
-        padding: 12px 40px;
-        border-radius: 50px;
-        transition: transform 0.2s;
-    }
-
-    .cta-section .btn-light:hover {
-        transform: scale(1.05);
-    }
-
-    /* ================= Footer ================= */
-    footer {
-        background: #212529;
-        color: #fff;
-    }
-
-    footer p {
-        margin: 0;
-    }
-
-    /* ================= Responsive Fixes ================= */
-    @media (max-width: 768px) {
-        #heroCarousel .carousel-caption {
-            font-size: 0.9rem;
-        }
-    }
-</style>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -100,16 +22,18 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
-                <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
-                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-            </ul>
+          <div class="collapse navbar-collapse" id="navbarNav">
+             <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashbord</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link " href="signup.html">Sign Up</a></li>
+      </ul>
         </div>
     </div>
 </nav>
@@ -118,21 +42,21 @@
 <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="image/download (1).jpg" class="d-block w-100" alt="Kalinchok">
+            <img src="./image/download (1).jpg" class="d-block w-100" alt="Kalinchok">
             <div class="carousel-caption d-none d-md-block">
                 <h2>Kalinchok</h2>
                 <p>Panoramic mountain views & Kalinchok Bhagwati Temple</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="image/download.jpg" class="d-block w-100" alt="Sailung">
+            <img src="./image/download.jpg" class="d-block w-100" alt="Sailung">
             <div class="carousel-caption d-none d-md-block">
                 <h2>Sailung</h2>
                 <p>Vast grasslands and breathtaking trekking trails</p>
             </div>
         </div>
         <div class="carousel-item">
-            <img src="image/download (2).jpg" class="d-block w-100" alt="Tsho Rolpa Lake">
+            <img src="./image/download (2).jpg" class="d-block w-100" alt="Tsho Rolpa Lake">
             <div class="carousel-caption d-none d-md-block">
                 <h2>Tsho Rolpa Lake</h2>
                 <p>Serene lake surrounded by pristine nature</p>
@@ -140,7 +64,7 @@
             </div>
         </div>
         <div class="carousel-item">
-            <img src="image/download (3).jpg" class="d-block w-100" alt="Jiri">
+            <img src="./image/download (3).jpg" class="d-block w-100" alt="Jiri">
             <div class="carousel-caption d-none d-md-block">
                 <h2>Jiri</h2>
                 <p>Gateway to Everest region trekking trails</p>
@@ -162,41 +86,41 @@
     <div class="row text-center g-4">
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
-                <img src="image/download (1).jpg" class="card-img-top" alt="Kalinchok">
+                <img src="./image/download (1).jpg" class="card-img-top" alt="Kalinchok">
                 <div class="card-body">
                     <h5 class="card-title">Kalinchok</h5>
                     <p class="card-text">Panoramic views & Kalinchok Bhagwati Temple</p>
-                    <a href="attractions.html#kalinchok" class="btn btn-primary btn-sm">Learn More</a>
+                    <a href="places.html" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
-                <img src="image/download.jpg" class="card-img-top" alt="Sailung">
+                <img src="./image/download.jpg" class="card-img-top" alt="Sailung">
                 <div class="card-body">
                     <h5 class="card-title">Sailung</h5>
                     <p class="card-text">Vast grasslands and trekking trails</p>
-                    <a href="attractions.html#sailung" class="btn btn-primary btn-sm">Learn More</a>
+                    <a href="places.html" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
-                <img src="image/download (2).jpg" class="card-img-top" alt="Tsho Lake">
+                <img src="./image/download (2).jpg" class="card-img-top" alt="Tsho Lake">
                 <div class="card-body">
-                    <h5 class="card-title">Tsho Lake</h5>
+                    <h5 class="card-title">Tsho Rolpa Lake</h5>
                     <p class="card-text">Serene lake surrounded by pristine nature</p>
-                    <a href="attractions.html#tsho_lake" class="btn btn-primary btn-sm">Learn More</a>
+                    <a href="places.html" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
-                <img src="image/download (3).jpg" class="card-img-top" alt="Jiri">
+                <img src="./image/download (3).jpg" class="card-img-top" alt="Jiri">
                 <div class="card-body">
                     <h5 class="card-title">Jiri</h5>
                     <p class="card-text">Gateway to Everest region trekking trails</p>
-                    <a href="attractions.html#jiri" class="btn btn-primary btn-sm">Learn More</a>
+                    <a href="places.html" class="btn btn-primary btn-sm">Learn More</a>
                 </div>
             </div>
         </div>
@@ -211,10 +135,63 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2026 Explore Dolakha. All Rights Reserved.</p>
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- About Section -->
+            <div class="col-md-4 mb-4">
+                <h5>About Explore Dolakha</h5>
+                <p>Explore Dolakha is your guide to discovering temples, trekking spots, lakes, and cultural gems in Dolakha, Nepal.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="places.html" class="text-white text-decoration-none">Places</a></li>
+                    <li><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5>Contact Us</h5>
+                <p><i class="bi bi-geo-alt-fill me-2"></i>Dolakha, Nepal</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>info@exploredolakha.com</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+977 980-xxxxxxx</p>
+            </div>
+
+            <!-- Newsletter / Social Media -->
+            <div class="col-md-3 mb-4">
+                <h5>Follow Us</h5>
+                <div class="d-flex mb-3">
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                </div>
+                <h6>Subscribe to Newsletter</h6>
+                <form class="d-flex" action="#" method="post">
+                    <input type="email" class="form-control form-control-sm me-2" placeholder="Email" required>
+                    <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+        <hr class="bg-light">
+        <p class="text-center mb-0">&copy; 2026 Explore Dolakha. All Rights Reserved.</p>
+    </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="script.js"></script>
+
 </body>
 </html>

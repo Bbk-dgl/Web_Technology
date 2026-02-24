@@ -3,94 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Dolakha</title>
+<title>About Dolakha - Explore Dolakha</title>
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<style>
-    /* ===== Global Styles ===== */
-    body {
-        font-family: 'Segoe UI', sans-serif;
-        line-height: 1.6;
-    }
-    h2, h3 {
-        font-weight: 700;
-    }
 
-    /* ===== Hero Section ===== */
-    .hero-section {
-        background: url('images/dolakha_banner.jpg') center/cover no-repeat;
-        height: 60vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        position: relative;
-    }
-    .hero-section::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0,0,0,0.5);
-    }
-    .hero-section .content {
-        position: relative;
-        z-index: 1;
-    }
-    .hero-section h1 {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-    }
-    .hero-section p {
-        font-size: 1.3rem;
-        margin-bottom: 1.5rem;
-        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
-    .hero-section .btn-primary {
-        border-radius: 50px;
-        padding: 10px 30px;
-        background: #198754;
-        border: none;
-        transition: 0.3s;
-    }
-    .hero-section .btn-primary:hover {
-        background: #0dcaf0;
-    }
-
-    /* ===== Card Hover Effects ===== */
-    .card:hover {
-        transform: translateY(-10px);
-        transition: 0.3s;
-        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    /* ===== Feature Icons ===== */
-    .feature-icon {
-        font-size: 3rem;
-        color: #0dcaf0;
-        margin-bottom: 15px;
-    }
-
-    /* ===== Section Styling ===== */
-    section {
-        padding: 60px 0;
-    }
-    .section-title {
-        margin-bottom: 40px;
-    }
-
-    /* ===== Footer ===== */
-    footer p {
-        margin: 0;
-    }
-
-    /* ===== Responsive ===== */
-    @media (max-width: 768px) {
-        .hero-section h1 { font-size: 2rem; }
-        .hero-section p { font-size: 1rem; }
-    }
-</style>
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -102,79 +22,77 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
-                <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
-                <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-            </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashbord</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link " href="signup.html">Sign Up</a></li>
+      </ul>
         </div>
     </div>
 </nav>
 
 <!-- Hero Section -->
-<header class="hero-section">
-    <div class="content text-center">
-        <h1>Discover Dolakha</h1>
-        <p>Historical temples, breathtaking landscapes, and vibrant culture await you!</p>
-        <a href="attractions.html" class="btn btn-primary">Explore Attractions</a>
+<!-- Hero Section -->
+<header class="hero-section text-center text-white d-flex align-items-center justify-content-center" 
+        style="height: 60vh; background: url('image/about.webp') center/cover no-repeat;">
+    <div class="hero-content">
+        <h1 class="display-4 fw-bold">Discover Dolakha</h1>
+        <p class="lead">Historical temples, breathtaking landscapes, and vibrant culture await you!</p>
+        <a href="places.html" class="btn btn-light btn-lg mt-3">Explore Places</a>
     </div>
 </header>
 
-<!-- About Dolakha -->
-<section class="container about-text">
-    <h2 class="text-center section-title">About Dolakha</h2>
+<!-- About Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">About Dolakha</h2>
     <p>Dolakha is a picturesque district in eastern Nepal, renowned for its historical temples, stunning mountains, trekking trails, and rich cultural heritage. It offers an incredible mix of natural beauty and spiritual significance, including the sacred Bhimeshwar Temple and Kalinchok Bhagwati Temple.</p>
     <p>This portal is designed to guide tourists and adventurers through Dolakha's top attractions, trekking routes, cultural experiences, and travel tips. From adventure trekking to cultural tours, Dolakha provides a truly unique experience for every traveler.</p>
 </section>
 
-<!-- Why Visit Dolakha -->
-<section class="container">
-    <h2 class="text-center section-title">Why Visit Dolakha?</h2>
+<!-- Why Visit Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Why Visit Dolakha?</h2>
     <div class="row text-center">
         <div class="col-md-4 mb-4">
             <div class="card shadow-sm h-100 py-4">
-                <div class="feature-icon"><i class="bi bi-bank"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Historical Temples</h5>
-                    <p class="card-text">Visit sacred sites like Bhimeshwar Temple and Kalinchok Bhagwati, rich with centuries of history.</p>
-                </div>
+                <i class="bi bi-bank fs-1 text-primary mb-3"></i>
+                <h5>Historical Temples</h5>
+                <p>Visit sacred sites like Bhimeshwar Temple and Kalinchok Bhagwati, rich with centuries of history.</p>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card shadow-sm h-100 py-4">
-                <div class="feature-icon"><i class="bi bi-geo-alt-fill"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Trekking & Nature</h5>
-                    <p class="card-text">Explore breathtaking trails in Kalinchok, Sailung, Tsho Lake, and Jiri, surrounded by nature.</p>
-                </div>
+                <i class="bi bi-geo-alt-fill fs-1 text-primary mb-3"></i>
+                <h5>Trekking & Nature</h5>
+                <p>Explore breathtaking trails in Kalinchok, Sailung, Tsho Lake, and Jiri, surrounded by nature.</p>
             </div>
         </div>
         <div class="col-md-4 mb-4">
             <div class="card shadow-sm h-100 py-4">
-                <div class="feature-icon"><i class="bi bi-music-note-beamed"></i></div>
-                <div class="card-body">
-                    <h5 class="card-title">Culture & Festivals</h5>
-                    <p class="card-text">Experience vibrant local festivals, traditional music, cuisine, and Dolakha’s rich heritage.</p>
-                </div>
+                <i class="bi bi-music-note-beamed fs-1 text-primary mb-3"></i>
+                <h5>Culture & Festivals</h5>
+                <p>Experience vibrant local festivals, traditional music, cuisine, and Dolakha’s rich heritage.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Top Attractions -->
-<section class="container">
-    <h2 class="text-center section-title">Top Attractions</h2>
+<!-- Top Attractions Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Top Places</h2>
     <div class="row g-4">
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
                 <img src="image/download (1).jpg" class="card-img-top" alt="Kalinchok">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Kalinchok</h5>
-                    <p class="card-text">Panoramic mountain views & Kalinchok Bhagwati Temple.</p>
+                    <h5>Kalinchok</h5>
+                    <p>Panoramic mountain views & Kalinchok Bhagwati Temple.</p>
                 </div>
             </div>
         </div>
@@ -182,17 +100,17 @@
             <div class="card shadow-sm h-100">
                 <img src="image/download.jpg" class="card-img-top" alt="Sailung">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Sailung</h5>
-                    <p class="card-text">Vast grasslands and stunning trekking trails.</p>
+                    <h5>Sailung</h5>
+                    <p>Vast grasslands and stunning trekking trails.</p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card shadow-sm h-100">
-                <img src="image/download (2).jpg" class="card-img-top" alt="Tsho Lake">
+                <img src="image/download (2).jpg" class="card-img-top" alt="Tsho Rolpa Lake">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Tsho Lake</h5>
-                    <p class="card-text">Serene lake surrounded by pristine nature.</p>
+                    <h5>Tsho Rolpa Lake</h5>
+                    <p>Serene lake surrounded by pristine nature.</p>
                 </div>
             </div>
         </div>
@@ -200,8 +118,8 @@
             <div class="card shadow-sm h-100">
                 <img src="image/download (3).jpg" class="card-img-top" alt="Jiri">
                 <div class="card-body text-center">
-                    <h5 class="card-title">Jiri</h5>
-                    <p class="card-text">Gateway to Everest region trekking trails.</p>
+                    <h5>Jiri</h5>
+                    <p>Gateway to Everest region trekking trails.</p>
                 </div>
             </div>
         </div>
@@ -209,10 +127,61 @@
 </section>
 
 <!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-    <p>&copy; 2026 Explore Dolakha. All Rights Reserved.</p>
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- About Section -->
+            <div class="col-md-4 mb-4">
+                <h5>About Explore Dolakha</h5>
+                <p>Explore Dolakha is your guide to discovering temples, trekking spots, lakes, and cultural gems in Dolakha, Nepal.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="places.html" class="text-white text-decoration-none">Places</a></li>
+                    <li><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5>Contact Us</h5>
+                <p><i class="bi bi-geo-alt-fill me-2"></i>Dolakha, Nepal</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>info@exploredolakha.com</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+977 980-xxxxxxx</p>
+            </div>
+
+            <!-- Newsletter / Social Media -->
+            <div class="col-md-3 mb-4">
+                <h5>Follow Us</h5>
+                <div class="d-flex mb-3">
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                </div>
+                <h6>Subscribe to Newsletter</h6>
+                <form class="d-flex" action="#" method="post">
+                    <input type="email" class="form-control form-control-sm me-2" placeholder="Email" required>
+                    <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+        <hr class="bg-light">
+        <p class="text-center mb-0">&copy; 2026 Explore Dolakha. All Rights Reserved.</p>
+    </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

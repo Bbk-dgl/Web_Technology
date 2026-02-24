@@ -3,21 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login - Explore Dolakha</title>
+<title>Places - Explore Dolakha</title>
+
+<!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/places.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="index.html">Explore Dolakha</a>
+    <a class="navbar-brand" href="index.html">Explore Dolakha</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-       <ul class="navbar-nav ms-auto">
+              <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
@@ -32,30 +35,75 @@
   </div>
 </nav>
 
-<div class="login-wrapper d-flex">
+<!-- Places Section -->
+<section class="container my-5">
+  <h2 class="text-center mb-4 section-title">Top Places in Dolakha</h2>
+  <div class="row g-4">
 
-  <div class="login-right d-flex align-items-center justify-content-center">
-    <div class="login-card p-5 shadow-lg rounded-4">
-      <h3 class="mb-4 text-center">Login</h3>
-      <form>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+    <!-- Kalinchok -->
+    <div class="col-md-3">
+      <div class="card shadow-sm h-100">
+        <img src="./image/download (1).jpg" class="card-img-top" alt="Kalinchok">
+        <div class="card-body text-center">
+          <h5 class="card-title">Kalinchok</h5>
+          <button class="btn btn-primary view-details" data-name="Kalinchok" data-bs-toggle="modal" data-bs-target="#detailsModal">View Details</button>
         </div>
-        <div class="mb-3">
-          <label for="password" class="form-label">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+      </div>
+    </div>
+
+    <!-- Sailung -->
+    <div class="col-md-3">
+      <div class="card shadow-sm h-100">
+        <img src="./image/download.jpg" class="card-img-top" alt="Sailung">
+        <div class="card-body text-center">
+          <h5 class="card-title">Sailung</h5>
+          <button class="btn btn-primary view-details" data-name="Sailung" data-bs-toggle="modal" data-bs-target="#detailsModal">View Details</button>
         </div>
-        <div class="d-grid mb-3">
-          <button type="submit" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+
+    <!-- Tsho Lake -->
+    <div class="col-md-3">
+      <div class="card shadow-sm h-100">
+        <img src="./image/download (2).jpg" class="card-img-top" alt="Tsho Rolpa Lake">
+        <div class="card-body text-center">
+          <h5 class="card-title">Tsho Rolpa Lake</h5>
+          <button class="btn btn-primary view-details" data-name="Tsho Lake" data-bs-toggle="modal" data-bs-target="#detailsModal">View Details</button>
         </div>
-        <p class="text-center">Don't have an account? <a href="signup.html">Sign Up</a></p>
-      </form>
+      </div>
+    </div>
+
+    <!-- Jiri -->
+    <div class="col-md-3">
+      <div class="card shadow-sm h-100">
+        <img src="./image/download (3).jpg" class="card-img-top" alt="Jiri">
+        <div class="card-body text-center">
+          <h5 class="card-title">Jiri</h5>
+          <button class="btn btn-primary view-details" data-name="Jiri" data-bs-toggle="modal" data-bs-target="#detailsModal">View Details</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Modal -->
+<div class="modal fade" id="detailsModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="modalTitle">Place Details</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body" id="modalContent"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-
 </div>
 
+<!-- Footer -->
 <!-- Footer -->
 <footer class="bg-dark text-white pt-5">
     <div class="container">
@@ -109,7 +157,9 @@
     </div>
 </footer>
 
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

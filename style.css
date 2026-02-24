@@ -1,47 +1,521 @@
+/* ================= General Styles ================= */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
 
-/* Card hover effect */
+/* ================= Navbar ================= */
+.navbar {
+    padding: 0.8rem 1rem;
+}
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+.nav-link {
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.nav-link.active {
+    font-weight: bold;
+    color: #fff !important;
+}
+.nav-link:hover {
+    color: #0b5ed7 !important;
+}
+
+/* ================= Hero Section ================= */
+.hero-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    height: 60-70vh;
+   
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section .btn {
+    margin-top: 1.5rem;
+    border-radius: 25px;
+    padding: 10px 30px;
+}
+
+/* ================= Section Titles ================= */
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ================= Cards ================= */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+}
 .card:hover {
     transform: translateY(-5px);
-    transition: 0.3s;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Feature icon in About page */
+.card .feature-icon {
+    font-size: 2.5rem;
+    color: #0d6efd;
+    margin-bottom: 1rem;
 }
 
 /* Buttons */
-.btn {
+.btn-primary {
     border-radius: 25px;
+    padding: 0.5rem 1.5rem;
+    transition: all 0.3s ease;
 }
-/* Carousel Caption Styling */
-        .carousel-caption h2 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
-        }
-        .carousel-caption p {
-            font-size: 1.2rem;
-            text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
-        }
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+}
 
-        /* Card hover effect */
-        .card:hover {
-            transform: translateY(-5px);
-            transition: 0.3s;
-        }
+/* ================= Modals ================= */
+.modal-header {
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.modal-body {
+    font-size: 0.95rem;
+}
 
-        .feature-img {
-            height: 200px;
-            object-fit: cover;
-        }
+/* ================= Forms ================= */
+form input,
+form select,
+form textarea {
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+form .input-group-text {
+    border-radius: 25px 0 0 25px;
+    background-color: #fff;
+}
 
-        /* CTA Section */
-        .cta-section {
-            background: #28a745;
-            color: white;
-        }
+/* ================= Profile Page ================= */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
 
-        .cta-section a {
-            color: #28a745;
-        }
+.profile-card {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
 
-        #bookingForm button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+.profile-card .avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.profile-body h2 {
+    font-weight: 700;
+}
+
+.profile-body p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.profile-stats div h5 {
+    font-weight: 700;
+}
+
+/* ================= Footer ================= */
+footer {
+    background-color: #212529;
+    color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+}
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+footer a:hover {
+    color: #0b5ed7;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 45vh;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    .card-img-top {
+        height: 150px;
+    }
+    .profile-container {
+        padding: 30px 15px;
+    }
+}
+
+/* my profile */
+/* General Body */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f4f8;
+    margin: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100vh;
+    background: #0d6efd;
+    color: #fff;
+    padding-top: 30px;
+    position: fixed;
+    width: 220px;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #0056b3;
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+}
+
+/* Profile Card */
+.profile-card {
+    position: relative;
+    max-width: 800px;
+    background: #fff;
+    border-radius: 20px;
+}
+
+.profile-card .avatar {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #fff;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.profile-card .avatar:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.profile-section {
+    padding-top: 100px;
+    padding-bottom: 60px;
+}
+
+.profile-stats div h5 {
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* login css */
+/* ===== General ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.navbar .nav-link.active {
+    font-weight: 600;
+    color: #ffdd57 !important;
+}
+
+/* ===== Login / SignUp Wrapper ===== */
+.login-wrapper {
+    min-height: 85vh;
+}
+
+/* ===== Left Side (Image & Overlay) ===== */
+.login-left {
+    background: url('images/background.jpg') no-repeat center center;
+    background-size: cover;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.login-left::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    border-radius: 0 15px 15px 0;
+}
+.login-left .overlay {
+    position: relative;
+    color: #fff;
+    z-index: 1;
+    text-align: center;
+    max-width: 300px;
+}
+.login-left h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.login-left p {
+    font-size: 1rem;
+}
+
+/* ===== Right Side Form ===== */
+.login-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.login-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== Form Fields ===== */
+.form-control {
+    border-radius: 50px;
+    padding: 12px 20px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease;
+}
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: 500;
+    background: linear-gradient(90deg, #0d6efd, #00b4d8);
+    border: none;
+    transition: 0.3s;
+}
+.btn-primary:hover {
+    background: linear-gradient(90deg, #00b4d8, #0d6efd);
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+    .login-left {
+        display: none;
+    }
+    .login-card {
+        padding: 30px 20px;
+    }
+}
+
+/* Dashboard */
+/* Dashboard Sidebar */
+.sidebar {
+    height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #0d6efd;
+    color: #fff;
+    padding-top: 30px;
+}
+
+.sidebar h3 {
+    color: #fff;
+    font-weight: 700;
+}
+
+.sidebar a {
+    display: block;
+    color: #fff;
+    padding: 12px 20px;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background: #0056b3;
+}
+
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+}
+
+/* Dashboard cards */
+.card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.card i {
+    margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .row.g-4 .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 576px) {
+    .row.g-4 .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* Light Blue Footer */
+.footer-light {
+    background: linear-gradient(135deg, #E3F2FD, #BBDEFB);
+    color: #0d1b2a;
+}
+
+/* Headings */
+.footer-light h5,
+.footer-light h6 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* Links */
+.footer-light a {
+    color: #0d1b2a;
+    transition: 0.3s;
+}
+
+.footer-light a:hover {
+    color: #1976D2;
+    padding-left: 5px;
+}
+
+/* Social Icons */
+.footer-light .fs-4 {
+    transition: 0.3s;
+}
+
+.footer-light .fs-4:hover {
+    color: #1976D2;
+    transform: scale(1.2);
+}
+
+/* Newsletter Button */
+.footer-light .btn-primary {
+    background-color: #1976D2;
+    border: none;
+}
+
+.footer-light .btn-primary:hover {
+    background-color: #0d47a1;
+}
+
+/* Bottom line */
+.footer-light hr {
+    border-color: rgba(0,0,0,0.2);
 }

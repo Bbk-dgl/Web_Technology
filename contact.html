@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Explore Dolakha</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact - Explore Dolakha</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/style.css">
 </head>
+<body>
 
-<body class="bg-light">
-
-<!-- ================= HEADER ================= -->
+<!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container">
     <a class="navbar-brand" href="index.html">Explore Dolakha</a>
-
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-       <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="attractions.html">Attractions</a></li>
-                <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
-                 <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+       <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="places.html">Places</a></li>
+        <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="my_profile.html">My Profile</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashbord</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link " href="signup.html">Sign Up</a></li>
       </ul>
     </div>
   </div>
 </nav>
-<!-- ================= END HEADER ================= -->
 
-
-<!-- ================= CONTACT SECTION ================= -->
-<div class="container my-5">
+<!-- Contact Section -->
+<section class="container my-5">
   <div class="row">
 
     <!-- Contact Info -->
@@ -48,7 +48,6 @@
       <div class="card shadow h-100">
         <div class="card-body">
           <h4 class="mb-4">Get in Touch</h4>
-
           <p><i class="bi bi-telephone-fill text-primary"></i> +977 9800000000</p>
           <p><i class="bi bi-envelope-fill text-primary"></i> info@exploredolakha.com</p>
           <p><i class="bi bi-geo-alt-fill text-primary"></i> Dolakha, Nepal</p>
@@ -58,7 +57,7 @@
           <h5>Follow Us</h5>
           <a href="#" class="text-dark me-3 fs-4"><i class="bi bi-facebook"></i></a>
           <a href="#" class="text-dark me-3 fs-4"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-dark me-3 fs-4"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-dark me-3 fs-4"><i class="bi bi-twitter"></i></a>
           <a href="#" class="text-dark fs-4"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
@@ -69,43 +68,35 @@
       <div class="card shadow">
         <div class="card-body">
           <h3 class="card-title text-center mb-4">Contact Us</h3>
-
-          <form action="contact-process.php" method="POST">
+          <form id="contactForm">
             <div class="mb-3">
               <label class="form-label">Full Name</label>
-              <input type="text" class="form-control" name="name" required>
+              <input type="text" class="form-control" id="contactName" placeholder="Enter your full name" required>
             </div>
-
             <div class="mb-3">
               <label class="form-label">Email</label>
-              <input type="email" class="form-control" name="email" required>
+              <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required>
             </div>
-
             <div class="mb-3">
               <label class="form-label">Subject</label>
-              <input type="text" class="form-control" name="subject" required>
+              <input type="text" class="form-control" id="contactSubject" placeholder="Enter subject" required>
             </div>
-
             <div class="mb-3">
               <label class="form-label">Message</label>
-              <textarea class="form-control" name="message" rows="4" required></textarea>
+              <textarea class="form-control" id="contactMessage" rows="4" placeholder="Write your message" required></textarea>
             </div>
-
             <div class="d-grid">
               <button type="submit" class="btn btn-primary">Send Message</button>
             </div>
           </form>
-
         </div>
       </div>
     </div>
 
   </div>
-</div>
-<!-- ================= END CONTACT SECTION ================= -->
+</section>
 
-
-<!-- ================= GOOGLE MAP ================= -->
+<!-- Google Map -->
 <div class="container mb-5">
   <div class="card shadow">
     <div class="card-body p-0">
@@ -120,21 +111,66 @@
     </div>
   </div>
 </div>
-<!-- ================= END MAP ================= -->
 
+<!-- Footer -->
+<!-- Footer -->
+<footer class="bg-dark text-white pt-5">
+    <div class="container">
+        <div class="row">
 
-<!-- ================= FOOTER ================= -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p class="mb-1">© 2026 Explore Dolakha. All Rights Reserved.</p>
-  
-  </div>
+            <!-- About Section -->
+            <div class="col-md-4 mb-4">
+                <h5>About Explore Dolakha</h5>
+                <p>Explore Dolakha is your guide to discovering temples, trekking spots, lakes, and cultural gems in Dolakha, Nepal.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-2 mb-4">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="places.html" class="text-white text-decoration-none">Places</a></li>
+                    <li><a href="booking.html" class="text-white text-decoration-none">Booking</a></li>
+                    <li><a href="contact.html" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-3 mb-4">
+                <h5>Contact Us</h5>
+                <p><i class="bi bi-geo-alt-fill me-2"></i>Dolakha, Nepal</p>
+                <p><i class="bi bi-envelope-fill me-2"></i>info@exploredolakha.com</p>
+                <p><i class="bi bi-telephone-fill me-2"></i>+977 980-xxxxxxx</p>
+            </div>
+
+            <!-- Newsletter / Social Media -->
+            <div class="col-md-3 mb-4">
+                <h5>Follow Us</h5>
+                <div class="d-flex mb-3">
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="text-white fs-4 me-3"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+                </div>
+                <h6>Subscribe to Newsletter</h6>
+                <form class="d-flex" action="#" method="post">
+                    <input type="email" class="form-control form-control-sm me-2" placeholder="Email" required>
+                    <button class="btn btn-primary btn-sm" type="submit">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+        <hr class="bg-light">
+        <p class="text-center mb-0">&copy; 2026 Explore Dolakha. All Rights Reserved.</p>
+    </div>
 </footer>
-<!-- ================= END FOOTER ================= -->
-
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+<script src="javascript/script.js"></script>
 
 </body>
 </html>
